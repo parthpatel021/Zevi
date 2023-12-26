@@ -1,38 +1,156 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;400;500;600;700;800&family=Rajdhani:wght@300;400;500;600;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+    background: url(https://s3-alpha-sig.figma.com/img/0106/3d18/863e50cc601d1e4790f6a190df701d4b?Expires=1704672000&Signature=qe73Plo4WRk9U6-V6YidVSZZpc1PbAP7wYMqMvTkNW89q0PWtl3qLSkl7NLCwhEK9RmwUY3Kvnon4RjWtueyUlJ1BoGSbij1G3SOzhAnIeCv5oYHJ8cOaZqW14vhgrClv6os6b85NgWsGK~GFbnCLD9oHDFrHy-3f7WYuWnl1Ddv7Hko7nEDHh5CkE~NQOfCwq0-Ork4Zh1hgSYg7M43RdV5DiYsfQpfRy86QevZldctfyAtMGn3pdr~0OEbS6Ni3gxcgsvzwwEzzQnZWmSL2H8AlBe67ZZLPBRxyUaF1vic8xp7i~eQy4ovUvIxKWh-pu3Jw8t0B1aufFFb22KNFA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4);
+    background-size: 100%;
+    background-position: 0 -80px;
+    background-repeat: no-repeat;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* ------------------- Home Page -------------------------------------- */
+.home {
+    background: rgba(215, 224, 255, 0.26);
+
+    width: 100%;
+    height: 100vh;
+
+
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.logo {
+    position: absolute;
+    right: 35px;
+    top: 35px;
+    background: url(https://s3-alpha-sig.figma.com/img/e844/4ff2/56f933855ffa630db6ae0594386f86a0?Expires=1704672000&Signature=cIF5IIjXzbNKVJqkEF89~tmADfi4KPnjt6ZOznphwVDILXmmJoMgPr4roluQJeckC3zNLO9uu3IBS-MWOGj-M1hcLtn3tbr1U9Nx~jGjKn9-eQ7kpez9iN3DbXLkhj0FSAnzYJhhyIid3JT6qIvYC5bJFVJk9WGcZW0w9e-EXkkVL9sUsXJYAFImdKG42GswkP6W8bNN~TY3d8-9SIyG5yZV7MaQHp8SINKW81-maCl1g6DDylsFjG~wMgUQy9ASmiVTAXXcE8-7VA8IiiZn0-SDtUWp5Z9US0-wJOqGTpHjMAPt2uWvdaxnynGSmKturdaMfbUTdzjPeXkyHQ1Llg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    width: 60px;
+    height: 37px;
+    z-index: 100;
 }
 
-.App-link {
-  color: #61dafb;
+.search-container {
+    position: absolute;
+    width: 58%;
+    top: 18%;
+    left: 19%;
+    display: flex;
+    background: white;
+    justify-content: space-between;
+
+    border: 1px solid white;
+    border-radius: 12px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.search-container input {
+    width: 90%;
+    height: 50px;
+
+    border: 1px solid white;
+    border-radius: 12px;
+    padding: 0 20px;
+    font-size: 20px;
+    font-weight: 500;
+
+    outline: 1px solid white;
+}
+
+.search-container input::placeholder {
+    color: rgba(0, 0, 0, 0.40);
+    font-family: Inter;
+    font-style: normal;
+    line-height: normal;
+}
+
+input:focus::placeholder {
+    color: transparent;
+}
+
+.search-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+    cursor: pointer;
+}
+
+/*--------------------------- Search-result Container ----------------------------*/
+.search-suggestion-container {
+    position: absolute;
+    width: 65%;
+    top: 27%;
+    left: 16%;
+    background: white;
+    padding: 20px 30px;
+
+    border-radius: 4px;
+    background: #FFF;
+    box-shadow: 0px 4px 40px 0px rgba(0, 0, 0, 0.25);
+}
+
+.search-suggestion-container h3 {
+    color: #000;
+    font-family: Inter;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin-bottom: 18px;
+}
+
+.tends-conatiner {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.tends-conatiner .trend {
+    max-width: 165px;
+    width: 18%;
+    height: 250px;
+    cursor: pointer;
+}
+
+.trend:hover{
+    font-weight: 600;
+}
+
+.trend img {
+    width: 100%;
+    height: 80%;
+    background: lightgray 50%;
+    border-radius: 4px;
+}
+
+.trend p {
+    padding-top: 4px;
+    color: #000;
+    font-family: Inter;
+    font-size: 12px;
+    font-style: normal;
+    line-height: normal;
+}
+
+.suggestion-container{
+
+}
+
+.suggestion-container p {
+    margin-top: 10px;
+    color: #000;
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    cursor: pointer;
+}
+
+.suggestion-container p:hover{
+    font-weight: 600;
 }
