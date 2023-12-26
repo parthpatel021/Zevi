@@ -1,0 +1,82 @@
+.result-container {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: 0px 10px;
+}
+
+.search-bar-container {
+    margin: 20px 30% 0 30%;
+    width: 40%;
+    height: 40px;
+
+    border: .687px solid rgba(0, 0, 0, 0.50);
+    border-radius: 10px;
+
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+}
+
+.result-h-w {
+    margin: 30px 20px 0 20px;
+}
+
+.result-h {
+    color: #000;
+    font-family: Inter;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.result-container {
+    margin-top: 20px;
+}
+
+.filter {
+    display: flex;
+    /* justify-content: center;  */
+    align-items: center;
+    height: 35px;
+}
+
+.filter-h-w{
+    margin: 0 10px 0 10px;
+    padding: 5px 0 10px 0;
+    border-bottom: 0.5px solid rgba(0, 0, 0, 0.20);
+    margin-bottom: 10px;
+}
+
+.filter-h{
+    color: var(--on-primary-secondary-bg-surface-high-importance, #2F3037);
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    padding-bottom: 10px;
+    text-transform:uppercase
+    
+}
+
+.css-12wnr2w-MuiButtonBase-root-MuiCheckbox-root{
+    padding: 0 !important;
+}
+
+.filter p{
+    padding-left: 8px;
+    color: #000;
+    font-family: Inter;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    text-transform: capitalize;
+    cursor: pointer;
+}
+
+.star-w{
+    margin-left: 5px;
+    cursor: pointer;
+}

@@ -6,15 +6,16 @@
 }
 
 body {
-    background: url(https://s3-alpha-sig.figma.com/img/0106/3d18/863e50cc601d1e4790f6a190df701d4b?Expires=1704672000&Signature=qe73Plo4WRk9U6-V6YidVSZZpc1PbAP7wYMqMvTkNW89q0PWtl3qLSkl7NLCwhEK9RmwUY3Kvnon4RjWtueyUlJ1BoGSbij1G3SOzhAnIeCv5oYHJ8cOaZqW14vhgrClv6os6b85NgWsGK~GFbnCLD9oHDFrHy-3f7WYuWnl1Ddv7Hko7nEDHh5CkE~NQOfCwq0-Ork4Zh1hgSYg7M43RdV5DiYsfQpfRy86QevZldctfyAtMGn3pdr~0OEbS6Ni3gxcgsvzwwEzzQnZWmSL2H8AlBe67ZZLPBRxyUaF1vic8xp7i~eQy4ovUvIxKWh-pu3Jw8t0B1aufFFb22KNFA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4);
-    background-size: 100%;
-    background-position: 0 -80px;
-    background-repeat: no-repeat;
+    
 }
 
 /* ------------------- Home Page -------------------------------------- */
 .home {
     background: rgba(215, 224, 255, 0.26);
+    background: url(https://s3-alpha-sig.figma.com/img/0106/3d18/863e50cc601d1e4790f6a190df701d4b?Expires=1704672000&Signature=qe73Plo4WRk9U6-V6YidVSZZpc1PbAP7wYMqMvTkNW89q0PWtl3qLSkl7NLCwhEK9RmwUY3Kvnon4RjWtueyUlJ1BoGSbij1G3SOzhAnIeCv5oYHJ8cOaZqW14vhgrClv6os6b85NgWsGK~GFbnCLD9oHDFrHy-3f7WYuWnl1Ddv7Hko7nEDHh5CkE~NQOfCwq0-Ork4Zh1hgSYg7M43RdV5DiYsfQpfRy86QevZldctfyAtMGn3pdr~0OEbS6Ni3gxcgsvzwwEzzQnZWmSL2H8AlBe67ZZLPBRxyUaF1vic8xp7i~eQy4ovUvIxKWh-pu3Jw8t0B1aufFFb22KNFA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4) rgba(215, 224, 255, 0.26);
+    background-size: 100%;
+    background-position: 0 -80px;
+    background-repeat: no-repeat;
 
     width: 100%;
     height: 100vh;
@@ -37,46 +38,9 @@ body {
 .search-container {
     position: absolute;
     width: 58%;
+    height: 50px;
     top: 18%;
     left: 19%;
-    display: flex;
-    background: white;
-    justify-content: space-between;
-
-    border: 1px solid white;
-    border-radius: 12px;
-}
-
-.search-container input {
-    width: 90%;
-    height: 50px;
-
-    border: 1px solid white;
-    border-radius: 12px;
-    padding: 0 20px;
-    font-size: 20px;
-    font-weight: 500;
-
-    outline: 1px solid white;
-}
-
-.search-container input::placeholder {
-    color: rgba(0, 0, 0, 0.40);
-    font-family: Inter;
-    font-style: normal;
-    line-height: normal;
-}
-
-input:focus::placeholder {
-    color: transparent;
-}
-
-.search-icon {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0 20px;
-    cursor: pointer;
 }
 
 /*--------------------------- Search-result Container ----------------------------*/
