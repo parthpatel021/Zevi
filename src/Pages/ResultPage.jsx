@@ -37,15 +37,8 @@ const ResultPage = () => {
         }
 
         // Filter by rating
-        if(filterParameters.rating.length > 0){
-            var isMatch = false;
-            for(var i = 0; i < filterParameters.rating.length; i++){
-                if (item.rating === filterParameters.rating[i]) {
-                    isMatch = true;
-                }
-            }
-
-            if(!isMatch) return false;
+        if (filterParameters.rating.length > 0 && !filterParameters.rating.includes(item.rating)) {
+            return false;
         }
 
         return true;
