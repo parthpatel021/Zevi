@@ -1,11 +1,17 @@
 /* eslint-disable jsx-a11y/alt-text */
-import React, { useRef, useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import { latestTrendData, popularSuggestionData } from '../assets/latestTrendData.js'
 import SearchBar from '../Components/SearchBar.jsx';
+import { useNavigate } from 'react-router-dom';
 
-const inputRef = React.createRef();
 const HomePage = () => {
+    const navigate = useNavigate();
     const [activeSuggestion, setActiveSuggestion] = useState(false);
+
+
+    const handleClick = () => {
+        navigate('/result');
+    }
 
     return (
         <div className='home'>
@@ -23,7 +29,7 @@ const HomePage = () => {
                             <div className="tends-conatiner">
                                 {latestTrendData.map(({ name, imgURL }) => {
                                     return (
-                                        <div className='trend'>
+                                        <div className='trend' onClick={handleClick}>
                                             <img src={imgURL} />
                                             <p>{name}</p>
                                         </div>
@@ -36,7 +42,7 @@ const HomePage = () => {
                             <div className='suggestion-container'>
                                 {popularSuggestionData.map((suggestion) => {
                                     return (
-                                        <p>{suggestion}</p>
+                                        <p onClick={handleClick}>{suggestion}</p>
                                     );
                                 })}
                             </div>

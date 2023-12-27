@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import SearchBar from '../Components/SearchBar'
 import FilterSection from '../Components/FilterSection'
 import resultData from './../assets/resultData';
@@ -7,6 +7,12 @@ import ProductCard from '../Components/ProductCard';
 import "../Styles/resultPage.css";
 
 const ResultPage = () => {
+    const [filterParameters, setFilterParameters] = useState({
+        brand: [],
+        priceRange: [],
+        Rating: 0,
+    });
+
     return (
         <div className='result-page'>
             <div className="search-bar-container">
