@@ -1,6 +1,6 @@
 .result-container {
     display: grid;
-    grid-template-columns: 1fr 3fr;
+    grid-template-columns: 1fr 4fr;
     gap: 0px 10px;
 }
 
@@ -41,14 +41,14 @@
     height: 35px;
 }
 
-.filter-h-w{
+.filter-h-w {
     margin: 0 10px 0 10px;
     padding: 5px 0 10px 0;
     border-bottom: 0.5px solid rgba(0, 0, 0, 0.20);
     margin-bottom: 10px;
 }
 
-.filter-h{
+.filter-h {
     color: var(--on-primary-secondary-bg-surface-high-importance, #2F3037);
     font-family: Inter;
     font-size: 16px;
@@ -56,15 +56,14 @@
     font-weight: 500;
     line-height: normal;
     padding-bottom: 10px;
-    text-transform:uppercase
-    
+    text-transform: uppercase
 }
 
-.css-12wnr2w-MuiButtonBase-root-MuiCheckbox-root{
+.css-12wnr2w-MuiButtonBase-root-MuiCheckbox-root {
     padding: 0 !important;
 }
 
-.filter p{
+.filter p {
     padding-left: 8px;
     color: #000;
     font-family: Inter;
@@ -76,7 +75,89 @@
     cursor: pointer;
 }
 
-.star-w{
+.star-w {
     margin-left: 5px;
     cursor: pointer;
 }
+
+/* Results section */
+.results {
+    /* display: flex;
+    justify-items: center;
+    align-items: center;
+    gap: 30px; */
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 2em;
+    margin-bottom: 30px;
+}
+
+.result-w {
+}
+
+.like-w{
+    max-width: 200px;
+}
+
+.product-img-w {
+    width: 100%;
+    height: 300px;
+    background-size:     cover;                      /* <------ */
+    background-repeat:   no-repeat;
+    background-position: center center;  
+}
+
+.product-info{
+    padding-top: 15px;
+}
+
+.product-name {
+    color: #000;
+    font-family: Inter;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.prices{
+    margin-top: 6px;
+}
+
+.prev-price {
+    color: rgba(0, 0, 0, 0.40);
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    text-decoration-line: line-through;
+}
+
+.curr-price {
+    color: #6D84FF;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.review{
+    margin-top: 6px;
+    display: flex;
+    align-items: center;
+}
+
+.review-number {
+    margin-left: 5px;
+    color: rgba(0, 0, 0, 0.80);
+    text-align: center;
+    font-family: Poppins;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+}
+
