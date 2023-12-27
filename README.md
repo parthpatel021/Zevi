@@ -1,6 +1,6 @@
 # Zevi
 
-Welcome to the Zevi React App! This application is designed to provide a seamless product discovery experience using Zevi's Neural search and ChatScout solutions.
+Welcome to the Zevi React App! This application is designed to provide a seamless product discovery experience.
 
 ## Table of Contents
 - [Introduction](#introduction)
