@@ -27,11 +27,11 @@ const ResultPage = () => {
         }
 
         // Filter by price range
-        for(var i = 0; i < filterParameters.priceRange.length; i++){
+        for (var i = 0; i < filterParameters.priceRange.length; i++) {
             if (
                 filterParameters.priceRange.length > 0 &&
                 (item.currPrice < filterParameters.priceRange[i].sPrice || item.currPrice > filterParameters.priceRange[i].ePrice)
-            ){
+            ) {
                 return false;
             }
         }
@@ -45,8 +45,21 @@ const ResultPage = () => {
     });
 
 
+    const addFilterParameter = (parameterName, filter) => {
+        const newFilterParameters = { ...filterParameters };
+        newFilterParameters[parameterName].push(filter);
+        setFilterParameters(newFilterParameters);
+    };
 
+    const removeFilterParameter = (parameterName, filter) => {
+        const newFilterParameters = { ...filterParameters };
 
+        newFilterParameters[parameterName] = newFilterParameters[parameterName].filter(
+            (item) => item !== filter
+        );
+
+        setFilterParameters(newFilterParameters);
+    };
 
     return (
         <div className='result-page'>
@@ -54,13 +67,20 @@ const ResultPage = () => {
             <div className="search-bar-container">
                 <SearchBar />
             </div>
+
             <div className='result-h-w'>
                 <h2 className='result-h'>Search Results</h2>
+
                 <div className="result-container">
+
                     {/* Filter Section */}
                     <div className="filters">
-                        <FilterSection />
+                        <FilterSection
+                            addFilterParameter={addFilterParameter}
+                            removeFilterParameter={removeFilterParameter}
+                        />
                     </div>
+
                     {/* Result Section */}
                     <div className="results">
                         {filteredData.map(result => {
@@ -69,7 +89,9 @@ const ResultPage = () => {
                             )
                         })}
                     </div>
+
                 </div>
+
             </div>
         </div>
     )

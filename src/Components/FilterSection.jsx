@@ -1,13 +1,18 @@
 import React, { useState } from 'react';
 import Checkbox from '@mui/material/Checkbox';
-import filterData from '../assets/filterData';
+import filterInfoData from '../assets/filterInfoData';
 import "../Styles/resultPage.css"
 
 
-const FilterMenu = ({ filter }) => {
+const FilterMenu = ({ filter, addFilter, removeFilter }) => {
     const [checked, setChecked] = React.useState(false);
 
     const handleChange = () => {
+        if(checked === true){
+            removeFilter(filter.parameter);
+        } else {
+            addFilter(filter.parameter);
+        }
         setChecked(!checked);
     };
 
@@ -18,15 +23,26 @@ const FilterMenu = ({ filter }) => {
                 checked={checked}
                 inputProps={{ 'aria-label': 'controlled' }}
             />
-            <p onClick={handleChange} style={{ fontWeight: `${checked ? '500' : '300'}` }}>{filter}</p>
+            <p onClick={handleChange} style={{ fontWeight: `${checked ? '500' : '300'}` }}>{filter.name}</p>
         </div>
 
     );
 }
 
 const FilterCategoryComponent = (props) => {
-    const { name, filters } = props.data;
+    const { data, addFilterParameter, removeFilterParameter } = props;
+    const { name, filters, parameterName } = data;
+
     const [isDropDownOpen, setIsDropDownOpen] = useState(false);
+
+    const addFilter = (filter) => {
+        addFilterParameter(parameterName, filter);
+    }
+
+    const removeFilter = (filter) => {
+        removeFilterParameter(parameterName, filter);
+    }
+
     return (
         <div className='filter-h-w'>
             <div className='filter-top' onClick={() => setIsDropDownOpen(!isDropDownOpen)}>
@@ -43,19 +59,24 @@ const FilterCategoryComponent = (props) => {
                 // style={{transform: `${isDropDownOpen? 'translateY(0%)' : 'translateY(-100%)'}`}}
             >
                 {filters.map(filter => {
-                    return <FilterMenu filter={filter} />
+                    return <FilterMenu filter={filter} addFilter={addFilter} removeFilter={removeFilter} />
                 })}
             </div>
         </div>
     );
 }
 
-const FilterSection = () => {
+const FilterSection = (props) => {
+    const { addFilterParameter, removeFilterParameter } = props;
     return (
         <div className='filter-section'>
-            {filterData.map((data) => {
+            {filterInfoData.map((data) => {
                 return (
-                    <FilterCategoryComponent data={data} />
+                    <FilterCategoryComponent 
+                        data={data} 
+                        addFilterParameter={addFilterParameter}
+                        removeFilterParameter={removeFilterParameter}
+                    />
                 )
             })}
         </div>
