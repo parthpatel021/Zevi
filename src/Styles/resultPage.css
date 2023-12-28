@@ -67,6 +67,11 @@
     /* justify-content: center;  */
     align-items: center;
     height: 35px;
+    transition: 0.3s;
+}
+
+.filter:hover{
+    transform: scale(1.05);
 }
 
 .filter-h-w {
@@ -121,6 +126,11 @@
 }
 
 .result-w {
+    transition: 0.3s;
+}
+
+.result-w:hover{
+    transform: scale(1.05);
 }
 
 .like-w{

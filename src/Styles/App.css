@@ -79,10 +79,12 @@ body {
     width: 18%;
     height: 250px;
     cursor: pointer;
+    transition: 0.3s;
 }
 
 .trend:hover{
     font-weight: 600;
+    transform: scale(1.05);
 }
 
 .trend img {
