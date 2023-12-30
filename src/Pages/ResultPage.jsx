@@ -85,7 +85,7 @@ const ResultPage = () => {
                     <div className="results">
                         {filteredData.map(result => {
                             return (
-                                <ProductCard result={result} />
+                                <ProductCard result={result} key={result.__id} />
                             )
                         })}
                     </div>
